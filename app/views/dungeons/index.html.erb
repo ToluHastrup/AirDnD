@@ -10,3 +10,5 @@
 <% @dungeons.each do |dungeon|   %>
 <%= link_to dungeon.name, dungeon_path(dungeon), class: "btn-btn-flat" %>
 <% end %>
+
+<%= link_to "bookings", dungeon_bookings_path(@dungeons), class: "btn-btn-flat" %>
