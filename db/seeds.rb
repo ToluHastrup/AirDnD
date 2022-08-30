@@ -19,3 +19,7 @@ Dungeon.create(
   description: 'beautiful dungeon with thicc dragons ',
   user: sam
 )
+
+Booking.create(
+  dates: 30
+)
