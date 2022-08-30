@@ -7,3 +7,6 @@
     <i class="fas fa-search"></i>
   </button>
 </div>
+<% @dungeons.each do |dungeon|   %>
+<%= link_to dungeon.name, dungeon_path(dungeon), class: "btn-btn-flat" %>
+<% end %>

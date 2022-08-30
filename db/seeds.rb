@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.destroy_all
+sam = User.create(
+email: 'beedbardard@gmail.com',
+password: 'beedcricket'
+)
+Dungeon.create(
+  name: 'big_dungeon',
+  address: 'your_mums_house',
+  price: 350,
+  dragon: true,
+  guests: 4,
+  description: 'beautiful dungeon with thicc dragons ',
+  user: sam
+)
