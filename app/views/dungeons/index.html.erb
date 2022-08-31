@@ -1,4 +1,4 @@
- <div class="input-group">
+ <%# <div class="input-group">
   <div class="form-outline">
     <input type="search" id="form1" class="form-control" />
     <label class="form-label" for="form1">Search</label>
@@ -6,9 +6,29 @@
   <button type="button" class="btn btn-primary">
     <i class="fas fa-search"></i>
   </button>
-</div>
-<% @dungeons.each do |dungeon|   %>
-<%= link_to dungeon.name, dungeon_path(dungeon), class: "btn-btn-flat" %>
-<% end %>
+</div> %>
 
-<%= link_to "bookings", dungeon_bookings_path(@dungeons), class: "btn-btn-flat" %>
+
+<%# <%= link_to "bookings", dungeon_bookings_path(@dungeons), class: "btn-btn-flat" %>
+<div class="banner" >
+  <div class="container">
+    <h1>Welcome to <strong>the Dungeons</strong></h1>
+    <p>Come inside</p>
+    <div class = "emoji">
+    <p>🔞 🤫</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container py-5">
+<div class="cards">
+  <% @dungeons.each do |dungeon|   %>
+    <%= link_to dungeon_path(dungeon), class: "text-decoration-none" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg)">
+        <%= dungeon.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+</div>
