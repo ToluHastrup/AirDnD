@@ -13,22 +13,69 @@
 <div class="banner" >
   <div class="container">
     <h1>Welcome to <strong>the Dungeons</strong></h1>
-    <p>Come inside</p>
-    <div class = "emoji">
-    <p>🔞 🤫</p>
+    <%# <p>Come inside</p> %>
+    <%# <div id = "emoji">
+    <p>🔞 🤫</p> %>
     </div>
   </div>
 </div>
 
 
-<div class="container py-5">
+<%# <div class="container py-5">
 <div class="cards">
   <% @dungeons.each do |dungeon|   %>
-    <%= link_to dungeon_path(dungeon), class: "text-decoration-none" do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg)">
+    <%# <%= link_to dungeon_path(dungeon), class: "text-decoration-none" do %>
+      <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg)">
         <%= dungeon.name %>
-      </div>
+      <%# </div>
     <% end %>
-  <% end %>
-</div>
-</div>
+  <%# <% end %>
+<%# </div>
+</div> %>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg">
+                    <h3>Big dungeon</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Dungeon located in the hidden depths of scotland</p>
+                        <a href="https://thawing-savannah-84161.herokuapp.com/dungeons/1">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg">
+                    <h3>underground dungeon</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>dungeon hidden underground</p>
+                        <a href="https://thawing-savannah-84161.herokuapp.com/dungeons/1">read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg">
+                    <h3>castle dungeon</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Dungeon located in the hidden depths of scotland</p>
+                        <a href="https://thawing-savannah-84161.herokuapp.com/dungeons/1">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
