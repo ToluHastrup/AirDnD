@@ -1,13 +1,27 @@
+<head>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
+</head>
+
+
+<body id= "dungeonbooking">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),  );">
   <div class="container">
     <h1>Big dungeon <strong></strong>  <strong></strong></h1>
-    <p>located in the hidden landscapes of scotland</p>
-    <a class="btn btn-flat" href="#">Book now</a>
+    <p>located in the hidden landscapes of scotland </p>
+    <p>amenities listed below</p>
+    <%= link_to "Book now", new_dungeon_booking_path(@dungeon), id: "btn" %>
   </div>
 </div>
+  <div id="medieval">
 
 
-
-
-<%= link_to "booking", new_dungeon_booking_path(@dungeon), class: "btn-btn-flat" %>
+  <ol id="list">
+  <li>Torture chamber included<i class="fa-solid fa-skull-crossbones"></i></li>
+  <li> Dragon included  <i class="fa-solid fa-dragon"></i></li>
+  <li> local gremlins  <i class="fa-brands fa-optin-monster"></i></li>
+  <li>catecomb located underground  <i class="fa-solid fa-dungeon"></i></li>
+  </ol>
+  </div>
