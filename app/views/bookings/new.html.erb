@@ -6,7 +6,7 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Make your booking</h3>
         <%= simple_form_for [@dungeon, @booking] do |booking| %>
-          <%= booking.input :dates, placeholder: 1 %>
+          <%= booking.input :dates, as: :date, html5: true%>
           <%= booking.submit class: 'btn btn-flat' %>
         <% end %>
       </div>
@@ -15,4 +15,3 @@
 </div>
 
 <%= link_to "dungeons", dungeons_path, class: "btn-btn-flat" %>
-
