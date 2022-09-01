@@ -13,23 +13,22 @@
 <div class="banner" >
   <div class="container">
     <h1>Welcome to <strong>the Dungeons</strong></h1>
-    <%# <p>Come inside</p> %>
-    <%# <div id = "emoji">
-    <p>🔞 🤫</p> %>
+    <p id = "welcome">Come inside</p>
+    <div id = "emoji">
+    <p>🔞 🤫</p>
     </div>
   </div>
 </div>
-
-<%= form_with url: dungeons_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a dungeon"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
-
+<div class="search-bar" style="width: 800px;">
+  <%= form_with url: dungeons_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a dungeon"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
 <%# <div class="container py-5">
 <div class="cards">
   <% @dungeons.each do |dungeon|   %>
@@ -42,7 +41,6 @@
 <%# </div>
 </div> %>
 
-<body class = "backcolour">
     <div class="container">
       <% @dungeons.each do |dungeon| %>
         <div class="card">
@@ -64,4 +62,3 @@
         </div>
       <% end %>
     </div>
-</body>
