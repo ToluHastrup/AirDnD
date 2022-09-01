@@ -7,6 +7,8 @@
 }
 
 .banner h1 {
+  position: absolute;
+  bottom: 75px;
   margin: 0;
   color: rgb(251, 251, 251);
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.837);
@@ -14,12 +16,12 @@
   font-weight: bold;
 }
 
-.banner p {
-  font-size: 22px;
-  color: rgb(16, 2, 2);
-  font-weight: bolder;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
+// .banner p {
+//   font-size: 62px;
+//   color: rgb(16, 2, 2);
+//   font-weight: bolder;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
 
 
 .container{
@@ -114,4 +116,17 @@
 .content{
   width: fit-content;
   height: fit-content ;
+}
+
+#emoji{
+  position: absolute;
+  bottom:-40px ;
+  font-size: 80px !important ;
+}
+
+#welcome{
+  position: absolute;
+  bottom: -75px;
+  font-size: larger;
+  font-weight: bolder;
 }
