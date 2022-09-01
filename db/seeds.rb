@@ -19,6 +19,24 @@ Dungeon.create(
   description: 'beautiful dungeon with thicc dragons ',
   user: sam
 )
+Dungeon.create(
+  name: 'Comfortably_Numb',
+  address: 'The_Wall',
+  price: 350,
+  dragon: true,
+  guests: 4,
+  description: 'There is no pain you are receding',
+  user: sam
+)
+Dungeon.create(
+  name: 'big_dungeon',
+  address: 'your_mums_house',
+  price: 350,
+  dragon: true,
+  guests: 4,
+  description: 'Impressive. Very Nice',
+  user: sam
+)
 
 Booking.create(
   dates: 30
