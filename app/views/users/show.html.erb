@@ -1,3 +1,4 @@
-<%= @bookings.each do |booking| %>
-<%= booking.name  %>
+<h1>Your bookings</h1>
+<p id="bookinglist"><% @bookings.each do |booking| %></p>
+<%= booking.dungeon.name %>
 <% end %>
