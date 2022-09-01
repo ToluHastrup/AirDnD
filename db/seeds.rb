@@ -5,39 +5,34 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Booking.destroy_all
+Dungeon.destroy_all
 User.destroy_all
-sam = User.create(
+sam = User.create!(
 email: 'beedbardard@gmail.com',
 password: 'beedcricket'
 )
-Dungeon.create(
+
+tom = User.create!(
+  email: 'been@gmail.com',
+  password: 'been11'
+  )
+
+
+Dungeon.create!(
   name: 'big_dungeon',
   address: 'your_mums_house',
   price: 350,
   dragon: true,
   guests: 4,
-  description: 'beautiful dungeon with thicc dragons ',
+  description: 'beautiful dungeon with dragons ',
   user: sam
 )
-Dungeon.create(
+Dungeon.create!(
   name: 'Comfortably_Numb',
   address: 'The_Wall',
-  price: 350,
+  price: 360,
   dragon: true,
-  guests: 4,
+  guests: 5,
   description: 'There is no pain you are receding',
-  user: sam
-)
-Dungeon.create(
-  name: 'big_dungeon',
-  address: 'your_mums_house',
-  price: 350,
-  dragon: true,
-  guests: 4,
-  description: 'Impressive. Very Nice',
-  user: sam
-)
-
-Booking.create(
-  dates: 30
-)
+  )

@@ -41,7 +41,6 @@
 <%# </div>
 </div> %>
 
-
     <div class="container">
       <% @dungeons.each do |dungeon| %>
         <div class="card">
@@ -53,8 +52,11 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Dungeon located in the hidden depths of scotland</p>
-                       <%= link_to "Read More" , dungeon_path(dungeon), class: "text-decoration-none" %>
+                    <p class = "price"> £<%= dungeon.price%></p>
+                       <p class = "desc"><%= dungeon.description %></p>
+                       <p class = "location"><%= dungeon.address %> </p>
+                       <p> <% dungeon.dragon %> </p>
+                       <%= link_to "Read More" , dungeon_path(dungeon), class: "cardbutton" %>
                 </div>
             </div>
         </div>

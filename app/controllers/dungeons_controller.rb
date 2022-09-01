@@ -1,6 +1,5 @@
 class DungeonsController < ApplicationController
 
-
 def show
 @dungeon = Dungeon.find(params[:id])
 end
@@ -20,8 +19,9 @@ end
 #changes
 def create
  @dungeon = Dungeon.new(dungeon_params)
- @dungeon.save
- redirect_to dungeon_path(@dungeon)
+ @dungeon.user = current_user
+ @dungeon.save!
+#  redirect_to dungeon_path(@dungeon)
 end
 
 private
