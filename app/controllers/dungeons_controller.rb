@@ -1,10 +1,17 @@
 class DungeonsController < ApplicationController
- def index
-  @dungeons = Dungeon.all
-end
+
 
 def show
 @dungeon = Dungeon.find(params[:id])
+end
+
+def index
+  if params[:query].present?
+    # @dungeons = Dungeon.where(name: params[:query])
+    @dungeons = Dungeon.where("name ILIKE ?", "%#{params[:query]}%")
+  else
+    @dungeons = Dungeon.all
+  end
 end
 
 def new

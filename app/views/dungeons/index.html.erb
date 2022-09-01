@@ -20,7 +20,14 @@
   </div>
 </div>
 
-
+<%= form_with url: dungeons_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a dungeon"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <%# <div class="container py-5">
 <div class="cards">
   <% @dungeons.each do |dungeon|   %>
@@ -33,7 +40,7 @@
 <%# </div>
 </div> %>
 
-<body>
+
     <div class="container">
       <% @dungeons.each do |dungeon| %>
         <div class="card">
@@ -52,4 +59,3 @@
         </div>
       <% end %>
     </div>
-</body>
