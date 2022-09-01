@@ -35,5 +35,4 @@ Dungeon.create!(
   dragon: true,
   guests: 5,
   description: 'There is no pain you are receding',
-  user: tom
-)
+  )
