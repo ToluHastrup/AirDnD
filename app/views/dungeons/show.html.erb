@@ -9,9 +9,9 @@
 <body id= "dungeonbooking">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),  );">
   <div class="container">
-    <h1>Big dungeon <strong></strong>  <strong></strong></h1>
-    <p>locatedd in the hidden landscapes of scotland </p>
-    <p>amenities listed below</p>
+
+    <h1><%= @dungeon.name %></h1>
+    <p class = "dungeondesc"><%=@dungeon.description  %></p>
     <%= link_to "Book now", new_dungeon_booking_path(@dungeon), id: "btn" %>
   </div>
 </div>
