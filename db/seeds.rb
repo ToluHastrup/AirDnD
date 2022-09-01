@@ -29,8 +29,8 @@ Dungeon.create(
   user: sam
 )
 Dungeon.create(
-  name: 'big_dungeon',
-  address: 'your_mums_house',
+  name: 'big dungeon',
+  address: 'your mums house',
   price: 350,
   dragon: true,
   guests: 4,
