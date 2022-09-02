@@ -11,6 +11,7 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 gem "sprockets-rails"
 
 gem "devise"
+gem "geocoder"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"

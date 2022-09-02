@@ -11,6 +11,12 @@ def index
   else
     @dungeons = Dungeon.all
   end
+  @markers = @dungeons.geocoded.map do |dungeon|
+    {
+      lat: dungeon.latitude,
+      lng: dungeon.longitude
+    }
+  end
 end
 
 def new
