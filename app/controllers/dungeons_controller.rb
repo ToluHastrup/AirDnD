@@ -23,7 +23,7 @@ end
   def new
     @dungeon = Dungeon.new
   end
-#changes
+  #changes
   def create
   @dungeon = Dungeon.new(dungeon_params)
   @dungeon.user = current_user
@@ -35,5 +35,3 @@ end
   def dungeon_params
     params.require(:dungeon).permit(:name, :address, :price, :description, :guests, :dragon, :photo)
   end
-
-end
