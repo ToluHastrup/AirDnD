@@ -3,6 +3,7 @@ class Dungeon < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
   validates :price, presence: true

@@ -9,7 +9,7 @@
 </div> %>
 
 <%# <%= link_to "bookings", dungeon_bookings_path(@dungeons), class: "btn-btn-flat" %>
-<div class="banner" >
+<div class="dungbanner" >
   <div class="container">
     <h1>Welcome to <strong>the Dungeons</strong></h1>
     <p id = "welcome">Come inside</p>
@@ -45,8 +45,10 @@
         <div class="card">
             <div class="face face1">
                 <div class="content">
-                    <img src="https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg">
-                    <h3><%= dungeon.name %></h3>
+                    <% if dungeon.photo.attached? %>
+                    <%= cl_image_tag dungeon.photo.key%>
+                    <% end %>
+                    <h3 id="cardtitle"><%= dungeon.name %></h3>
                 </div>
             </div>
             <div class="face face2">
