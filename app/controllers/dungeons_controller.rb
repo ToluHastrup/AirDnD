@@ -11,9 +11,8 @@ class DungeonsController < ApplicationController
     else
       @dungeons = Dungeon.all
     end
-  end
 
-  @markers = @dungeons.geocoded.map do |dungeon|
+    @markers = @dungeons.geocoded.map do |dungeon|
     {
       lat: dungeon.latitude,
       lng: dungeon.longitude
