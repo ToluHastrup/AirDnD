@@ -9,38 +9,28 @@
 </div> %>
 
 <%# <%= link_to "bookings", dungeon_bookings_path(@dungeons), class: "btn-btn-flat" %>
+<html>
+<head>
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='';
+  document.getElementById(hidden).style.display='none';
+  return false;
+}
+</script>
+</head>
+
 <div class="dungbanner" >
   <div class="container">
     <h1>Welcome to <strong>the Dungeons</strong></h1>
     <p id = "welcome">Come inside</p>
-    <div id = "emoji">
-    <p>🔞 🤫</p>
     </div>
   </div>
 </div>
-<div class="search-bar" style="width: 800px;">
-  <%= form_with url: dungeons_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a dungeon"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-</div>
-<%# <div class="container py-5">
-<div class="cards">
-  <% @dungeons.each do |dungeon|   %>
-    <%# <%= link_to dungeon_path(dungeon), class: "text-decoration-none" do %>
-      <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://tourismus.nuernberg.de/fileadmin/_processed_/2/7/csm_lochgefaengnis_01_a062cb6860.jpg)">
-        <%= dungeon.name %>
-      <%# </div>
-    <% end %>
-  <%# <% end %>
-<%# </div>
-</div> %>
 
-    <div class="container">
+<div id="Page1">
+<a href="#" onclick="return show('Page2','Page1');">Show page 2</a>
+ <div class="container">
       <% @dungeons.each do |dungeon| %>
         <div class="card">
             <div class="face face1">
@@ -64,7 +54,16 @@
       <% end %>
     </div>
 
-<div style="width: 100%; height: 600px;"
+  </div>
+
+  <div id="Page2" style="display:none;">
+   <a href="#" onclick="return show('Page1','Page2');">Show page 1</a>
+<div style="height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+  </div>
+
+</body>
+</html>
