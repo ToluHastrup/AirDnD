@@ -1,10 +1,9 @@
 .banner {
-  background-image:url(dungeons.jpg);
-  background-size: cover;
-  background-position: center;
   padding: 150px 0;
+    background-image:url(blur.png);
+    background-size: cover;
+    background-position: center;
 }
-
 .banner h1 {
   margin: 0;
   color: white;
@@ -30,6 +29,8 @@
   border-color:white!important;
    padding: 10px;
    border-radius: 30px;
+   position: absolute;
+   bottom: -100px;
 }
 #dungeonbooking {
 background-color: white;
@@ -55,4 +56,25 @@ background-image: url(app/assets/images/dungeongif.gif);
 
   #copyright{
     text-align: center;
+  }
+
+  .dungbanner {
+    padding: 150px 0;
+      background-image:url(dungeons.jpg);
+      background-size: cover;
+      background-position: center;
+  }
+  .dungbanner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .dungbanner p {
+    font-size: 65px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
